@@ -1,1 +1,2 @@
-# beaute
+# frontend-lp-instant-beaute
+ 
