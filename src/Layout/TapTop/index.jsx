@@ -29,7 +29,7 @@ const TapTop = () => {
   return (
     <>
       <div className="theme-option">
-        <SettingBox />
+      {/*<SettingBox />*/}
         {themeOption?.general?.back_to_top_enable && (
           <div className="back-to-top" style={{ display: taptopStyle }}>
             <a onClick={() => executeScroll()}>

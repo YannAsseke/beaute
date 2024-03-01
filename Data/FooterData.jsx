@@ -4,7 +4,7 @@ export const footerMenuItems = [
   {
     id: 1,
     active: true,
-    title: "Home",
+    title: "Accueil",
     fillIcon: <RiHome2Fill className="activated" />,
     lineIcon: <RiHome2Line className="deactivated" />,
     path: "/",
@@ -12,7 +12,7 @@ export const footerMenuItems = [
   {
     id: 2,
     active: false,
-    title: "Category",
+    title: "Categories",
     className: "mobile-category",
     fillIcon: <RiAppsFill className="activated" />,
     lineIcon: <RiAppsLine className="deactivated" />,
@@ -21,7 +21,7 @@ export const footerMenuItems = [
   {
     id: 3,
     active: false,
-    title: "Search",
+    title: "Recherche",
     lineIcon: <RiSearchLine className="deactivated" />,
     fillIcon: <RiSearchFill className="activated" />,
     path: "/search",
@@ -34,12 +34,12 @@ export const footerMenuItems = [
 //    fillIcon: <RiHeart3Fill className="activated" />,
 //    path: "/wishlist",
  // },
-  {
-    id: 5,
-    active: false,
-    title: "Cart",
-    lineIcon: <RiShoppingBagLine className="deactivated" />,
-    fillIcon: <RiShoppingBagFill className="activated" />,
-    path: "/cart",
-  },
+ // {
+ //   id: 5,
+//    active: false,
+ //   title: "Panier",
+ //   lineIcon: <RiShoppingBagLine className="deactivated" />,
+ //   fillIcon: <RiShoppingBagFill className="activated" />,
+//    path: "/cart",
+//  },
 ];

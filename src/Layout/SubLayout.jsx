@@ -17,7 +17,7 @@ const SubLayout = ({ children }) => {
   const isNewsLetter = Cookies.get('newsLetterModal');
   const { themeOption } = useContext(ThemeOptionContext);
   useEffect(() => {
-    const message = ['⚡ Come Back !!!', "🔥 Don't forget this....."];
+    const message = [];
     let timer;
 
     const updateTitle = (index) => {
@@ -34,7 +34,7 @@ const SubLayout = ({ children }) => {
       let value =
         themeOption?.general?.site_title && themeOption?.general?.site_tagline
           ? `${themeOption?.general?.site_title} | ${themeOption?.general?.site_tagline}`
-          : 'FastKart Marketplace: Where Vendors Shine Together';
+          : 'Instant beaute';
       document.title = value;
       clearTimeout(timer);
     }
@@ -52,8 +52,8 @@ const SubLayout = ({ children }) => {
       <CookiesComponent />
       <StickyCompare />
       <RecentPurchase />
-      {!isNewsLetter && <NewsLetterModal />}
-      <ExitModal />
+      {/*  {!isNewsLetter && <NewsLetterModal />}
+      <ExitModal />*/}
     </>
   );
 };

@@ -67,7 +67,7 @@ const HeaderCartBottom = ({
                   {convertCurrency(shippingFreeAmt - getTotal(cartProducts))}
                 </span>{" "}
                 {t("moreandenjoy")}{" "}
-                <span className="shipping">{t("FREESHIPPING!")}</span>
+                <span className="shipping">{t("FREESHIPPING")}</span>
               </p>
             ) : (
               <p>
@@ -126,13 +126,13 @@ const HeaderCartBottom = ({
               <h4 className="theme-color fw-bold">{convertCurrency(total)}</h4>
             </div>
             <div className="button-group">
-              <Link
+            {/*  <Link
                 href={`/${i18Lang}/cart`}
                 className="btn btn-sm cart-button"
                 onClick={() => setCartCanvas("")}
               >
                 {t("ViewCart")}
-              </Link>
+              </Link>*/}
               <Link
                 href={whatsappURL}
                 className="btn btn-sm cart-button theme-bg-color text-white"

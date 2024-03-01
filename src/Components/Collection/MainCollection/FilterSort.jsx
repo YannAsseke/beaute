@@ -9,7 +9,8 @@ import { usePathname, useRouter } from 'next/navigation';
 const FilterSort = ({ filter, setFilter }) => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const toggle = () => setDropdownOpen((prevState) => !prevState);
-  const [attribute, price, category, layout] = useCustomSearchParams(['attribute', 'price', 'category', 'layout']);
+  //const [attribute, price, category, layout] = useCustomSearchParams(['attribute', 'price', 'category', 'layout']);
+  const [attribute, price, category, layout] = useCustomSearchParams(['category']);
   const { i18Lang } = useContext(I18NextContext);
   const { t } = useTranslation(i18Lang, 'common');
   const router = useRouter();
@@ -23,7 +24,8 @@ const FilterSort = ({ filter, setFilter }) => {
       };
     });
 
-    let queryParams = new URLSearchParams({ ...attribute, ...price, ...category, ...layout, sortBy: data.value }).toString();
+    //let queryParams = new URLSearchParams({ ...attribute, ...price, ...category, ...layout, sortBy: data.value }).toString();
+    let queryParams = new URLSearchParams({ ...category, sortBy: data.value }).toString();
     if (data && (data.value == 'asc' || data.value == 'desc')) {
       const fieldQuery = new URLSearchParams();
       fieldQuery.append('field', 'created_at');

@@ -4,6 +4,8 @@ import TopbarLeft from './TopbarLeft';
 import TopbarSlider from './TopbarSlider';
 import TopLanguage from './TopLanguage';
 import HeaderCurrency from './HeaderCurrency';
+import Slider from 'react-slick';
+import { topBarContentSlider } from '../../../../Data/SliderSettingsData';
 import ThemeOptionContext from '@/Helper/ThemeOptionsContext';
 import { usePathname } from 'next/navigation';
 import I18NextContext from '@/Helper/I18NextContext';
@@ -29,14 +31,23 @@ const HeaderTopBar = () => {
           <TopbarLeft />
           <TopbarSlider />
           <Col lg={3}>
-            <ul className='about-list right-nav-about'>
+
+          <div>
+          <h4 style={{ color: 'white', textAlign: 'center' }}>Livraison gratuite dès 20 000 CFA</h4>
+        </div>
+
+
+
+
+
+           {/* <ul className='about-list right-nav-about'>
               <li className='right-nav-list'>
                 <TopLanguage />
               </li>
               <li className='right-nav-list'>
                 <HeaderCurrency />
               </li>
-            </ul>
+            </ul>*/}
           </Col>
         </Row>
       </div>

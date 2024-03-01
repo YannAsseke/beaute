@@ -10,7 +10,7 @@ import ParisLogo from '../../../public/assets/images/logo/1.png';
 import TokyoLogo from '../../../public/assets/images/logo/2.png';
 import RomeLogo from '../../../public/assets/images/logo/3.png';
 import MadridLogo from '../../../public/assets/images/logo/4.png';
-import OtherLogo from '../../../public/assets/images/logo/6.png';
+import OtherLogo from '../../../public/assets/images/logo/60.png';
 import Image from 'next/image';
 
 const FooterLogoContent = () => {

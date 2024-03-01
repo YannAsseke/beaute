@@ -12,7 +12,7 @@ import ParisLogo from '../../../../public/assets/images/logo/1.png';
 import TokyoLogo from '../../../../public/assets/images/logo/2.png';
 import RomeLogo from '../../../../public/assets/images/logo/3.png';
 import MadridLogo from '../../../../public/assets/images/logo/4.png';
-import OtherLogo from '../../../../public/assets/images/logo/6.png';
+import OtherLogo from '../../../../public/assets/images/logo/6.jpeg';
 import Image from 'next/image';
 
 const HeaderLogo = () => {
@@ -50,11 +50,11 @@ const HeaderLogo = () => {
   }, [pathName, i18Lang, themeOption?.logo?.header_logo?.original_url, isImage, logoImage]);
   return (
     <>
-      <Btn className='navbar-toggler d-xl-none d-inline navbar-menu-button me-2' type='button'>
+    {/*  <Btn className='navbar-toggler d-xl-none d-inline navbar-menu-button me-2' type='button'>
         <span className='navbar-toggler-icon' onClick={() => setMobileSideBar(!mobileSideBar)}>
           <RiMenuLine />
         </span>
-      </Btn>
+      </Btn>*/}
       <Link href='/' className='web-logo nav-logo'>
         {isImage ? <Image src={logo} className="img-fluid" alt='Header' height={28} width={162} /> : <img src={logo ? logo : logoImage} className="img-fluid" alt='Header' height={28} width={162} />}
       </Link>

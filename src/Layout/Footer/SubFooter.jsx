@@ -14,9 +14,9 @@ const SubFooter = () => {
         </div>
       )}
 
-      <div className='payment'>
+{/* <div className='payment'>
         <Image src={paymentImage} alt='payment' height={35} width={302} />
-      </div>
+      </div>*/}
       <FooterSocial />
     </div>
   );

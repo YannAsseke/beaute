@@ -55,10 +55,10 @@ const ProductBox1 = ({ imgUrl, badge, productDetail, isClose, refetch, addAction
          {/* <del>{convertCurrency(productDetail?.price)}</del>*/}
         </h5>
 
-        <div className='product-rating mt-sm-2 mt-1'>
+        {/* <div className='product-rating mt-sm-2 mt-1'>
           <ProductBox1Rating totalRating={productDetail?.rating_count || 0} />
           <h6 className='theme-color'>{ModifyString(productDetail.stock_status, false, '_')}</h6>
-        </div>
+        </div>*/}
         {addAction && <ProductBox1Cart productObj={productDetail} />}
       </div>
     </div>
