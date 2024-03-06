@@ -3,7 +3,7 @@ import Image from 'next/image';
 import { Form, Input, InputGroup, ModalHeader } from 'reactstrap';
 import CustomModal from '@/Components/Common/CustomModal';
 import Btn from '@/Elements/Buttons/Btn';
-import newsLetterImage from '../../../public/assets/images/newsletter/3.jpg';
+import newsLetterImage from '../../../public/assets/images/newsletter/4.jpg';
 import I18NextContext from '@/Helper/I18NextContext';
 import { useTranslation } from '@/app/i18n/client';
 import Cookies from 'js-cookie';
@@ -31,7 +31,7 @@ const NewsLetterModal = () => {
           <div className='modal-image'>
             <Image src={newsLetterImage} className='img-fluid' alt='NewsLetter Image' width={400} height={361} />
           </div>
-          <div className='modal-content content-padding'>
+          {/*  <div className='modal-content content-padding'>
             <div>
               <Image src={Logo} className='modal-logo' alt='newsletter' height={17} width={100} />
               <h2>
@@ -46,7 +46,7 @@ const NewsLetterModal = () => {
                 </InputGroup>
               </Form>
             </div>
-          </div>
+          </div>*/}
         </div>
       </CustomModal>
     </>

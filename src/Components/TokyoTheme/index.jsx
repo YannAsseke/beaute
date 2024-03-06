@@ -21,7 +21,7 @@ const TokyoTheme = () => {
   useEffect(() => {
     const headerTops = document.getElementsByClassName('header-top');
 
-    document.documentElement.style.setProperty('--theme-color', '#d99f46');
+    document.documentElement.style.setProperty('--theme-color', '#000000');
     let timer = setTimeout(() => {
       for (const headerTop of headerTops) {
         headerTop.classList.add('bg-dark');

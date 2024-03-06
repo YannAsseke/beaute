@@ -1,6 +1,14 @@
 /**=====================
      Header scss
 ==========================**/
+.toast-delete {
+  background: red !important;
+}
+
+.Toastify__toast-theme--light {
+  display: none !important;
+}
+
 .onhover-category-box {
   position: absolute;
   top: 0;
@@ -966,7 +974,7 @@ header {
 
       &.fixed-cart {
         position: fixed;
-        right: -100%;
+        right: -420px;
         height: 100vh;
         top: 0;
         border-radius: 0;

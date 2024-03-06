@@ -19,7 +19,7 @@ const BerlinTheme = () => {
     select: (res) => res?.data,
   });
   useEffect(() => {
-    document.documentElement.style.setProperty('--theme-color', '#417394');
+    document.documentElement.style.setProperty('--theme-color', '#000000');
     refetch();
     return () => {
       document.documentElement.style.removeProperty('--theme-color');

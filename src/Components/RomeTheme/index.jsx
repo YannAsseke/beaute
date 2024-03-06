@@ -22,7 +22,7 @@ const RomeTheme = () => {
   const { setGetProductIds, isLoading: productLoader } = useContext(ProductIdsContext);
   const { data, isLoading, refetch } = useQuery(['rome'], () => request({ url: HomePageAPI, params: { slug: 'rome' } }), { enabled: false, refetchOnWindowFocus: false, select: (res) => res?.data });
   useEffect(() => {
-    document.documentElement.style.setProperty('--theme-color', '#0baf9a');
+    document.documentElement.style.setProperty('--theme-color', '#000000');
     refetch();
     return () => {
       document.documentElement.style.removeProperty('--theme-color');

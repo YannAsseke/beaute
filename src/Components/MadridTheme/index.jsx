@@ -7,6 +7,9 @@ import MadridHomeBanner from './MadridHomeBanner';
 import { HomePageAPI } from '@/Utils/AxiosUtils/API';
 import HomeBanner from '../ParisTheme/HomeBanner';
 import ShopCategory from './ShopCategory';
+import WrapperComponent from '../Common/WrapperComponent';
+import ProductSection2 from '../ParisTheme/ProductSections/ProductSection2';
+import { osakaCategoryOption, osakaSliderOption } from '../../../Data/SliderSettingsData';
 import ProductWrapper from './ProductWrapper';
 import BankOfferBanner from './BankOfferBanner';
 import DealProduct from './DealProducts';
@@ -26,7 +29,7 @@ const MadridTheme = () => {
     select: (res) => res?.data,
   });
   useEffect(() => {
-    document.documentElement.style.setProperty('--theme-color', '#239698');
+    document.documentElement.style.setProperty('--theme-color', '#000000');
     refetch();
     return () => {
       document.documentElement.style.removeProperty('--theme-color');
@@ -50,7 +53,13 @@ const MadridTheme = () => {
 
       {data?.content?.featured_banners?.banners?.length > 0 && data?.content?.featured_banners?.banners?.length >= 4 && <HomeBanner bannersData={data?.content?.featured_banners?.banners} />}
 
-      {data?.content?.categories_image_list?.status && <ShopCategory dataAPI={data?.content?.categories_image_list} />}
+      {/*data?.content?.categories_image_list?.status && <ProductSection2 dataAPI={data?.content?.categories_icon_list} classes={{ sliderOption: osakaCategoryOption, noCustomClass: true }} />*/}
+
+      {
+        <WrapperComponent noRowCol={true}>
+          <ProductSection2 dataAPI={data?.content?.categories_icon_list} classes={{ sliderOption: osakaCategoryOption, noCustomClass: true }} />
+        </WrapperComponent>
+      }
 
       {data?.content?.products_list_1?.status && (
         <ProductWrapper

@@ -30,3 +30,4 @@ yarn-error.log*
 # vercel
 .vercel
 /idea/
+public/assets/images/newsletter/3.psd
