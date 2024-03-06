@@ -41,7 +41,6 @@ const ProductBox1Cart = ({ productObj }) => {
   }, [cartProducts]);
 
   const handleAddProduct = () => {
-    console.log(cartProducts);
     handleIncDec(
       1,
       productObj,
@@ -50,7 +49,7 @@ const ProductBox1Cart = ({ productObj }) => {
       setIsOpen,
       getSelectedVariant ? getSelectedVariant : null
     );
-    toast.success("1 Produit " + cartProducts[0].product.name + " ajouté !", {
+    toast.success("1 Produit  ajouté !", {
       position: toast.POSITION.BOTTOM_RIGHT,
       autoClose: 2000, // Ferme automatiquement le toast après 2 secondes
     });
@@ -65,7 +64,7 @@ const ProductBox1Cart = ({ productObj }) => {
       setIsOpen,
       getSelectedVariant ? getSelectedVariant : null
     );
-    toast.success("1 Produit " + cartProducts[0].product.name + " retiré !", {
+    toast.success("1 Produit retiré !", {
       position: toast.POSITION.BOTTOM_RIGHT,
       autoClose: 2000,
       className: "toast-delete", // Ferme automatiquement le toast après 2 secondes
