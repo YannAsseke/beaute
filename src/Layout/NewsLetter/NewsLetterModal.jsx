@@ -31,7 +31,7 @@ const NewsLetterModal = () => {
           <div className='modal-image'>
             <Image src={newsLetterImage} className='img-fluid' alt='NewsLetter Image' width={400} height={361} />
           </div>
-          {/*  <div className='modal-content content-padding'>
+          <div className='modal-content content-padding'>
             <div>
               <Image src={Logo} className='modal-logo' alt='newsletter' height={17} width={100} />
               <h2>
@@ -46,7 +46,7 @@ const NewsLetterModal = () => {
                 </InputGroup>
               </Form>
             </div>
-          </div>*/}
+          </div>
         </div>
       </CustomModal>
     </>

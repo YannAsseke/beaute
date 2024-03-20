@@ -734,7 +734,7 @@ export const headerMenu = [
   },
   {
     id: 9,
-    title: "Make Up",
+    title: "Maquillage",
     path: "makeup",
   },
   {

@@ -7,7 +7,7 @@
   overflow: hidden;
 
   .breadscrumb-contain {
-    padding: calc(26px + (40 - 26) * ((100vw - 320px) / (1920 - 320))) 0;
+    padding: calc(2px + (40 - 26) * ((100vw - 320px) / (1920 - 320))) 0;
     text-align: center;
     color: $title-color;
     display: flex;
@@ -64,7 +64,7 @@
     nav {
       margin-left: auto;
 
-      body[dir='rtl'] & {
+      body[dir="rtl"] & {
         margin-left: unset;
         margin-right: auto;
       }
@@ -72,7 +72,7 @@
       @include mq-max(md) {
         margin-inline: auto;
 
-        body[dir='rtl'] & {
+        body[dir="rtl"] & {
           margin-inline: auto;
         }
       }
@@ -96,7 +96,7 @@
             align-items: center;
           }
 
-          +.breadcrumb-item {
+          + .breadcrumb-item {
             position: relative;
             padding-left: 8px;
 
@@ -113,7 +113,7 @@
               font-size: 18px;
               padding-right: 8px;
 
-              body[dir='rtl'] & {
+              body[dir="rtl"] & {
                 padding-right: unset;
                 padding-left: 8px;
               }
@@ -129,7 +129,10 @@
 
     .order-box {
       .order-image {
-        @include pseudowh($width: calc(170px + (250 - 170) * ((100vw - 320px) / (1920 - 320))), $height: auto);
+        @include pseudowh(
+          $width: calc(170px + (250 - 170) * ((100vw - 320px) / (1920 - 320))),
+          $height: auto
+        );
         margin: 0 auto calc(16px + (28 - 16) * ((100vw - 320px) / (1920 - 320)));
 
         .checkmark {
@@ -377,7 +380,9 @@
             position: relative;
             padding: 0;
             margin-left: 5px;
-            font-size: calc(13px + (14 - 13) * ((100vw - 320px) / (1920 - 320)));
+            font-size: calc(
+              13px + (14 - 13) * ((100vw - 320px) / (1920 - 320))
+            );
           }
         }
       }
@@ -386,7 +391,7 @@
 }
 
 .vendore-breadscrumb-section {
-  background-image: url('../../images/vendor-page/breadcrumb.png');
+  background-image: url("../../images/vendor-page/breadcrumb.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -429,7 +434,10 @@
       }
 
       .form-control {
-        padding: calc(8px + (14 - 8) * ((100vw - 320px) / (1920 - 320))) calc(95px + (122 - 95) * ((100vw - 320px) / (1920 - 320))) calc(8px + (14 - 8) * ((100vw - 320px) / (1920 - 320))) calc(48px + (59 - 48) * ((100vw - 320px) / (1920 - 320)));
+        padding: calc(8px + (14 - 8) * ((100vw - 320px) / (1920 - 320)))
+          calc(95px + (122 - 95) * ((100vw - 320px) / (1920 - 320)))
+          calc(8px + (14 - 8) * ((100vw - 320px) / (1920 - 320)))
+          calc(48px + (59 - 48) * ((100vw - 320px) / (1920 - 320)));
         border: none;
       }
 

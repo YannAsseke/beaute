@@ -3,6 +3,6 @@ export const headerOptionsMap = {
   "/theme/osaka": "basic_header",
   "/theme/berlin": "classic_header",
   "/theme/denver": "classic_header",
-  "/theme/madrid": "minimal_header",
+  "/theme/madrid": "classic_header",
   "/theme/rome": "standard_header",
 };

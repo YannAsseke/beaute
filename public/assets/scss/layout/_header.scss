@@ -1,14 +1,6 @@
 /**=====================
      Header scss
 ==========================**/
-.toast-delete {
-  background: red !important;
-}
-
-.Toastify__toast-theme--light {
-  display: none !important;
-}
-
 .onhover-category-box {
   position: absolute;
   top: 0;
@@ -62,11 +54,7 @@
   }
 
   ul {
-    @include flex_wrap(
-      $dis: flex,
-      $wrap: wrap,
-      $gap: calc(4px + (11 - 4) * ((100vw - 320px) / (1920 - 320)))
-    );
+    @include flex_wrap($dis: flex, $wrap: wrap, $gap: calc(4px + (11 - 4) * ((100vw - 320px) / (1920 - 320))));
 
     li {
       position: relative;
@@ -250,11 +238,7 @@ header {
       }
 
       ul {
-        @include flex_wrap(
-          $dis: flex,
-          $wrap: wrap,
-          $gap: calc(4px + (11 - 4) * ((100vw - 320px) / (1920 - 320)))
-        );
+        @include flex_wrap($dis: flex, $wrap: wrap, $gap: calc(4px + (11 - 4) * ((100vw - 320px) / (1920 - 320))));
 
         li {
           position: relative;
@@ -294,7 +278,7 @@ header {
         font-size: 18px;
         margin-right: 5px;
 
-        body[dir="rtl"] & {
+        body[dir='rtl'] & {
           margin-right: unset;
           margin-left: 5px;
         }
@@ -321,11 +305,11 @@ header {
         display: flex;
         align-items: center;
 
-        + li {
+        +li {
           margin-left: 25px;
           position: relative;
 
-          body[dir="rtl"] & {
+          body[dir='rtl'] & {
             margin-left: unset;
             margin-right: 25px;
           }
@@ -336,7 +320,7 @@ header {
             left: -13px;
             background-color: rgba(#ffffff, 0.3);
 
-            body[dir="rtl"] & {
+            body[dir='rtl'] & {
               left: unset;
               right: -13px;
             }
@@ -368,7 +352,7 @@ header {
             color: $white;
             padding: 0 18px 0 0;
 
-            body[dir="rtl"] & {
+            body[dir='rtl'] & {
               padding: 0 0 0 18px;
             }
 
@@ -390,13 +374,13 @@ header {
             }
 
             &::before {
-              @include pos($pos: absolute, $content: "\ea4e");
+              @include pos($pos: absolute, $content: '\ea4e');
               @include remixicon;
               @include center(vertical);
               right: 0;
               color: #ffffff;
 
-              body[dir="rtl"] & {
+              body[dir='rtl'] & {
                 right: unset;
                 left: 0;
               }
@@ -406,7 +390,7 @@ header {
               width: 20px;
               margin-right: 10px;
 
-              body[dir="rtl"] & {
+              body[dir='rtl'] & {
                 margin-right: unset;
                 margin-left: 10px;
               }
@@ -447,7 +431,7 @@ header {
             }
 
             li {
-              + li {
+              +li {
                 margin-left: 0;
               }
 
@@ -473,20 +457,20 @@ header {
               }
             }
 
-            > a {
-              > .dropdown-item {
+            >a {
+              >.dropdown-item {
                 display: flex;
                 align-items: center;
                 font-size: 14px;
                 gap: 10px;
 
                 &:active {
-                  > span {
+                  >span {
                     color: #fff;
                   }
                 }
 
-                > span {
+                >span {
                   margin-top: 0;
                   font-weight: 500;
                   font-size: 14px;
@@ -532,10 +516,7 @@ header {
 
       .web-logo {
         img {
-          @include pseudowh(
-            $width: calc(120px + (162 - 120) * ((100vw - 320px) / (1920 - 320))),
-            $height: auto
-          );
+          @include pseudowh($width: calc(120px + (162 - 120) * ((100vw - 320px) / (1920 - 320))), $height: auto);
           object-fit: contain;
 
           @include mq-max(md) {
@@ -562,7 +543,7 @@ header {
           margin-right: 13px;
           position: relative;
 
-          body[dir="rtl"] & {
+          body[dir='rtl'] & {
             margin-right: unset;
             margin-left: 13px;
             padding-right: 7px;
@@ -573,7 +554,7 @@ header {
             margin-right: unset;
             margin-left: 13px;
 
-            body[dir="rtl"] & {
+            body[dir='rtl'] & {
               margin-left: unset;
               margin-right: 13px;
             }
@@ -582,7 +563,7 @@ header {
           @media (max-width: 1556px) {
             padding-right: 7px;
 
-            body[dir="rtl"] & {
+            body[dir='rtl'] & {
               padding-right: 7px;
               padding-left: 7px;
             }
@@ -634,7 +615,7 @@ header {
               cursor: pointer;
               background-color: $white;
 
-              body[dir="rtl"] & {
+              body[dir='rtl'] & {
                 background-position: left center;
                 padding: 0.375rem 0.75rem 0.375rem 2.25rem;
               }
@@ -652,7 +633,7 @@ header {
               margin-left: 17px;
               color: $content-color;
 
-              body[dir="rtl"] & {
+              body[dir='rtl'] & {
                 margin-left: unset;
                 margin-right: 17px;
               }
@@ -684,7 +665,7 @@ header {
               color: $title-color;
               border-color: $border-color;
 
-              body[dir="rtl"] & {
+              body[dir='rtl'] & {
                 border-radius: 0 5px 5px 0;
               }
 
@@ -700,7 +681,7 @@ header {
               border-radius: 5px;
               border: 1px solid #ffa53b;
 
-              body[dir="rtl"] & {
+              body[dir='rtl'] & {
                 border-radius: 5px 0 0 5px !important;
               }
 
@@ -726,7 +707,7 @@ header {
         @include mq-max(xl) {
           margin-left: auto;
 
-          body[dir="rtl"] & {
+          body[dir='rtl'] & {
             margin-left: unset;
             margin-right: auto;
           }
@@ -735,7 +716,7 @@ header {
         @include mq-max(md) {
           margin-left: unset;
 
-          body[dir="rtl"] & {
+          body[dir='rtl'] & {
             margin-left: unset;
             margin-right: unset;
           }
@@ -749,7 +730,7 @@ header {
             position: relative;
             padding-right: 32px;
 
-            body[dir="rtl"] & {
+            body[dir='rtl'] & {
               padding-right: unset;
               padding-left: 32px;
             }
@@ -777,7 +758,7 @@ header {
             &:last-child {
               padding-right: 0;
 
-              body[dir="rtl"] & {
+              body[dir='rtl'] & {
                 padding-right: unset;
                 padding-left: 0;
               }
@@ -794,7 +775,7 @@ header {
               right: 14px;
               background-color: #ddd;
 
-              body[dir="rtl"] & {
+              body[dir='rtl'] & {
                 right: unset;
                 left: 14px;
               }
@@ -811,7 +792,7 @@ header {
                   margin-right: 14px;
                   font-size: 24px;
 
-                  body[dir="rtl"] & {
+                  body[dir='rtl'] & {
                     margin-right: unset;
                     margin-left: 14px;
                   }
@@ -819,14 +800,14 @@ header {
                   @include mq-max(4xl) {
                     margin-right: 0;
 
-                    body[dir="rtl"] & {
+                    body[dir='rtl'] & {
                       margin-right: unset;
                       margin-left: 0;
                     }
                   }
                 }
               }
-              .user-box {
+              .user-box{
                 width: 40px;
                 height: 40px;
                 display: flex;
@@ -918,8 +899,7 @@ header {
       width: 360px;
       border-radius: 10px;
       padding: 0;
-      box-shadow: -1px 0 10px 0 rgba($title-color, 0.07),
-        5px 20px 40px 0 rgba($title-color, 0.04);
+      box-shadow: -1px 0 10px 0 rgba($title-color, 0.07), 5px 20px 40px 0 rgba($title-color, 0.04);
       opacity: 0;
       transition: all 0.3s ease-in-out;
       visibility: hidden;
@@ -936,7 +916,7 @@ header {
       }
 
       .cart-list {
-        > li {
+        >li {
           .drop-cart {
             .drop-contain {
               h5 {
@@ -981,10 +961,7 @@ header {
         opacity: 1;
         visibility: visible;
         padding: 0;
-        @media (min-width: 435px) {
-          width: 400px;
-        }
-        width: 100%;
+        width: 400px;
         z-index: 10;
 
         body[dir="rtl"] & {
@@ -1119,9 +1096,7 @@ header {
             border-radius: 100px;
             position: relative;
             overflow: unset;
-            margin-bottom: calc(
-              18px + (31 - 18) * ((100vw - 320px) / (1920 - 320))
-            );
+            margin-bottom: calc(18px + (31 - 18) * ((100vw - 320px) / (1920 - 320)));
 
             .progress-bar {
               height: calc(5px + (8 - 5) * ((100vw - 320px) / (1920 - 320)));
@@ -1140,9 +1115,7 @@ header {
               @include flex_common;
               background-color: var(--theme-color);
               color: $white;
-              font-size: calc(
-                15px + (17 - 15) * ((100vw - 320px) / (1920 - 320))
-              );
+              font-size: calc(15px + (17 - 15) * ((100vw - 320px) / (1920 - 320)));
             }
           }
         }
@@ -1153,9 +1126,7 @@ header {
         }
 
         .price-box {
-          padding-block: calc(
-            7px + (11 - 7) * ((100vw - 320px) / (1920 - 320))
-          );
+          padding-block: calc(7px + (11 - 7) * ((100vw - 320px) / (1920 - 320)));
         }
 
         .progress {
@@ -1166,9 +1137,7 @@ header {
           border-radius: 100px;
           position: relative;
           overflow: unset;
-          margin-bottom: calc(
-            18px + (31 - 18) * ((100vw - 320px) / (1920 - 320))
-          );
+          margin-bottom: calc(18px + (31 - 18) * ((100vw - 320px) / (1920 - 320)));
 
           .progress-bar {
             height: calc(5px + (8 - 5) * ((100vw - 320px) / (1920 - 320)));
@@ -1197,9 +1166,7 @@ header {
               }
 
               svg {
-                font-size: calc(
-                  14px + (16 - 14) * ((100vw - 320px) / (1920 - 320))
-                );
+                font-size: calc(14px + (16 - 14) * ((100vw - 320px) / (1920 - 320)));
               }
             }
 
@@ -1254,7 +1221,7 @@ header {
             display: block;
             width: 100%;
 
-            + li {
+            +li {
               padding-top: 8px;
               margin-top: 8px;
               border-top: 1px solid #eee;
@@ -1317,11 +1284,11 @@ header {
           opacity: 0.44;
         }
 
-        > li {
+        >li {
           margin: 0;
           width: 100%;
 
-          + li {
+          +li {
             margin-left: 0;
             margin-top: 10px;
             padding-top: 10px;
@@ -1363,9 +1330,7 @@ header {
               h5 {
                 @include line;
                 margin-bottom: 5px;
-                font-size: calc(
-                  15px + (17 - 15) * ((100vw - 320px) / (1920 - 320))
-                );
+                font-size: calc(15px + (17 - 15) * ((100vw - 320px) / (1920 - 320)));
                 color: $title-color;
                 font-weight: 500;
               }
@@ -1484,6 +1449,7 @@ header {
           }
 
           .progress {
+
             .progress-bar,
             i {
               background-color: #ff4f4f;
@@ -1501,6 +1467,7 @@ header {
           }
 
           .progress {
+
             .progress-bar,
             i {
               background-color: #ffa53b;
@@ -1518,6 +1485,7 @@ header {
           }
 
           .progress {
+
             .progress-bar,
             i {
               background-color: var(--theme-color);
@@ -1546,11 +1514,7 @@ header {
       }
 
       .price-box {
-        @include flex_common(
-          $dis: flex,
-          $align: center,
-          $justify: space-between
-        );
+        @include flex_common($dis: flex, $align: center, $justify: space-between);
         margin: 0;
         padding: 0;
         border: unset;
@@ -1631,8 +1595,7 @@ header {
 
       .dropdown-category {
         @include flex_common;
-        padding: calc(10px + (15 - 10) * ((100vw - 320px) / (1920 - 320)))
-          calc(16px + (31 - 16) * ((100vw - 320px) / (1920 - 320)));
+        padding: calc(10px + (15 - 10) * ((100vw - 320px) / (1920 - 320))) calc(16px + (31 - 16) * ((100vw - 320px) / (1920 - 320)));
         background: var(--theme-color);
         color: #ffffff;
         border-radius: 5px;
@@ -1650,11 +1613,9 @@ header {
           font-size: 23px;
           margin-right: calc(9px + (16 - 9) * ((100vw - 320px) / (1920 - 320)));
 
-          body[dir="rtl"] & {
+          body[dir='rtl'] & {
             margin-right: unset;
-            margin-left: calc(
-              9px + (16 - 9) * ((100vw - 320px) / (1920 - 320))
-            );
+            margin-left: calc(9px + (16 - 9) * ((100vw - 320px) / (1920 - 320)));
           }
         }
 
@@ -1767,10 +1728,7 @@ header {
         }
 
         @include mq-max(md) {
-          @include pseudowh(
-            $width: calc(300px + (320 - 300) * ((100vw - 320px) / (1920 - 320))),
-            $height: 100vh
-          );
+          @include pseudowh($width: calc(300px + (320 - 300) * ((100vw - 320px) / (1920 - 320))), $height: 100vh);
           position: fixed;
           top: 0;
           left: -320px;
@@ -1782,7 +1740,7 @@ header {
           transition: all 0.3s ease-in-out;
           box-shadow: none;
 
-          body[dir="rtl"] & {
+          body[dir='rtl'] & {
             left: unset;
             right: -320px;
           }
@@ -1802,11 +1760,7 @@ header {
           display: none;
 
           @include mq-max(md) {
-            @include flex_common(
-              $dis: flex,
-              $align: center,
-              $justify: space-between
-            );
+            @include flex_common($dis: flex, $align: center, $justify: space-between);
             padding: 20px 24px;
             border-bottom: 1px solid $border-color;
             box-shadow: 0 2px 10px -3px rgba($title-color, 0.1);
@@ -1890,8 +1844,7 @@ header {
 
       .deal-button {
         color: var(--theme-color);
-        padding: calc(6px + (15 - 6) * ((100vw - 320px) / (1920 - 320)))
-          calc(11px + (20 - 11) * ((100vw - 320px) / (1920 - 320)));
+        padding: calc(6px + (15 - 6) * ((100vw - 320px) / (1920 - 320))) calc(11px + (20 - 11) * ((100vw - 320px) / (1920 - 320)));
         position: relative;
         border-radius: 5px;
         overflow: hidden;
@@ -1912,7 +1865,7 @@ header {
           margin-right: 6px;
           font-size: 21px;
 
-          body[dir="rtl"] & {
+          body[dir='rtl'] & {
             margin-right: unset;
             margin-left: 6px;
           }
@@ -1920,7 +1873,7 @@ header {
           @include mq-max(2xl) {
             margin-right: 0;
 
-            body[dir="rtl"] & {
+            body[dir='rtl'] & {
               margin-right: unset;
               margin-left: 0;
             }
@@ -2276,7 +2229,7 @@ header {
       color: var(--theme-color);
       font-weight: bolder;
 
-      > div {
+      >div {
         margin-top: -6px;
       }
 
@@ -2358,21 +2311,17 @@ header {
       display: inline-block;
       margin-left: calc(16px + (29 - 16) * ((100vw - 320px) / (1920 - 320)));
 
-      body[dir="rtl"] & {
+      body[dir='rtl'] & {
         margin-left: unset;
         margin-right: calc(16px + (29 - 16) * ((100vw - 320px) / (1920 - 320)));
       }
 
       @include mq-max(2xl) {
-        @include flex_common(
-          $dis: flex,
-          $align: center,
-          $justify: space-between
-        );
+        @include flex_common($dis: flex, $align: center, $justify: space-between);
         margin-left: 25px;
         float: right;
 
-        body[dir="rtl"] & {
+        body[dir='rtl'] & {
           margin-left: unset;
           margin-right: 25px;
           float: left;
@@ -2382,7 +2331,7 @@ header {
       @include mq-max(xl) {
         margin-left: 15px;
 
-        body[dir="rtl"] & {
+        body[dir='rtl'] & {
           margin-left: unset;
           margin-right: 15px;
         }
@@ -2418,7 +2367,7 @@ header {
           z-index: 0;
           cursor: pointer;
 
-          :not(.btn-check) + &:active {
+          :not(.btn-check)+&:active {
             background-color: transparent;
             color: $content-color;
           }
@@ -2529,7 +2478,7 @@ header {
     align-items: center;
     margin-left: auto;
 
-    body[dir="rtl"] & {
+    body[dir='rtl'] & {
       margin-left: unset;
       margin-right: auto;
     }
@@ -2566,7 +2515,7 @@ header {
           }
         }
 
-        + .dropdown {
+        +.dropdown {
           margin-left: 23px;
 
           &::after {
@@ -2593,10 +2542,7 @@ header {
       align-items: center;
 
       .header-icon {
-        @include pseudowh(
-          $width: calc(35px + (46 - 35) * ((100vw - 320px) / (1920 - 320))),
-          $height: calc(35px + (46 - 35) * ((100vw - 320px) / (1920 - 320)))
-        );
+        @include pseudowh($width: calc(35px + (46 - 35) * ((100vw - 320px) / (1920 - 320))), $height: calc(35px + (46 - 35) * ((100vw - 320px) / (1920 - 320))));
         @include flex_common;
         font-size: 18px;
         border: 1px solid $border-color;
@@ -2605,7 +2551,7 @@ header {
         padding: 0;
         position: relative;
 
-        + .header-icon {
+        +.header-icon {
           margin-left: 38px;
 
           &::after {
@@ -2640,7 +2586,7 @@ header {
           @include mq-max(xl) {
             display: flex;
 
-            + .header-icon {
+            +.header-icon {
               margin-left: 38px;
 
               &::after {
@@ -2675,16 +2621,16 @@ header {
     }
 
     .option-list {
-      > ul {
+      >ul {
         display: flex;
 
-        > li {
+        >li {
           position: relative;
 
           &:nth-of-type(5n-3) {
             display: none;
 
-            + li {
+            +li {
               margin-left: 0;
 
               &::after {
@@ -2697,16 +2643,16 @@ header {
             &:nth-of-type(5n-3) {
               display: block;
 
-              + li {
+              +li {
                 margin-left: 22px;
 
-                body[dir="rtl"] & {
+                body[dir='rtl'] & {
                   margin-left: unset;
                   margin-right: 22px;
                 }
 
                 &::after {
-                  content: "";
+                  content: '';
                 }
               }
             }
@@ -2718,10 +2664,10 @@ header {
             }
           }
 
-          + li {
+          +li {
             margin-left: 37px;
 
-            body[dir="rtl"] & {
+            body[dir='rtl'] & {
               margin-left: unset;
               margin-right: 37px;
             }
@@ -2729,7 +2675,7 @@ header {
             @include mq-max(3xl) {
               margin-left: 22px;
 
-              body[dir="rtl"] & {
+              body[dir='rtl'] & {
                 margin-left: unset;
                 margin-right: 22px;
               }
@@ -2742,7 +2688,7 @@ header {
               left: -20px;
               background-color: $border-color;
 
-              body[dir="rtl"] & {
+              body[dir='rtl'] & {
                 left: unset;
                 right: -20px;
               }
@@ -2750,7 +2696,7 @@ header {
               @include mq-max(3xl) {
                 left: -13px;
 
-                body[dir="rtl"] & {
+                body[dir='rtl'] & {
                   left: unset;
                   right: -13px;
                 }
@@ -2759,10 +2705,7 @@ header {
           }
 
           .header-icon {
-            @include pseudowh(
-              $width: calc(35px + (46 - 35) * ((100vw - 320px) / (1920 - 320))),
-              $height: calc(35px + (46 - 35) * ((100vw - 320px) / (1920 - 320)))
-            );
+            @include pseudowh($width: calc(35px + (46 - 35) * ((100vw - 320px) / (1920 - 320))), $height: calc(35px + (46 - 35) * ((100vw - 320px) / (1920 - 320))));
             @include flex_common;
             font-size: 18px;
             border: 1px solid $border-color;
@@ -2771,7 +2714,7 @@ header {
             padding: 10px;
             position: relative;
 
-            + .header-icon {
+            +.header-icon {
               margin-left: 38px;
 
               &::after {
@@ -2804,7 +2747,7 @@ header {
               @include mq-max(xl) {
                 display: flex;
 
-                + .header-icon {
+                +.header-icon {
                   margin-left: 38px;
 
                   &::after {
@@ -2833,9 +2776,7 @@ header {
 
             svg {
               color: $black;
-              font-size: calc(
-                18px + (22 - 18) * ((100vw - 320px) / (1920 - 320))
-              );
+              font-size: calc(18px + (22 - 18) * ((100vw - 320px) / (1920 - 320)));
             }
           }
         }
@@ -2849,10 +2790,7 @@ header {
         position: relative;
 
         .header-icon {
-          @include pseudowh(
-            $width: calc(35px + (46 - 35) * ((100vw - 320px) / (1920 - 320))),
-            $height: calc(35px + (46 - 35) * ((100vw - 320px) / (1920 - 320)))
-          );
+          @include pseudowh($width: calc(35px + (46 - 35) * ((100vw - 320px) / (1920 - 320))), $height: calc(35px + (46 - 35) * ((100vw - 320px) / (1920 - 320))));
           @include flex_common;
           font-size: 18px;
           border: 1px solid $border-color;
@@ -2861,7 +2799,7 @@ header {
           padding: 10px;
           position: relative;
 
-          + .header-icon {
+          +.header-icon {
             margin-left: 38px;
 
             &::after {
@@ -2888,9 +2826,7 @@ header {
 
           svg {
             color: $black;
-            font-size: calc(
-              18px + (22 - 18) * ((100vw - 320px) / (1920 - 320))
-            );
+            font-size: calc(18px + (22 - 18) * ((100vw - 320px) / (1920 - 320)));
           }
         }
 
@@ -2913,7 +2849,7 @@ header {
           }
         }
 
-        + li {
+        +li {
           margin-left: 37px;
 
           body[dir="rtl"] & {
@@ -2990,7 +2926,7 @@ header {
     align-items: center;
     margin-left: auto;
 
-    body[dir="rtl"] & {
+    body[dir='rtl'] & {
       margin-left: unset;
       margin-right: auto;
     }
@@ -3017,7 +2953,7 @@ header {
         margin-bottom: 0;
         margin-left: 8px;
 
-        body[dir="rtl"] & {
+        body[dir='rtl'] & {
           margin-left: unset;
           margin-right: 8px;
         }
@@ -3036,7 +2972,7 @@ header {
         font-size: 16px;
         font-weight: 500;
 
-        body[dir="rtl"] & {
+        body[dir='rtl'] & {
           margin-left: unset;
           margin-right: 7px;
         }
@@ -3062,11 +2998,7 @@ header {
           .main-fire {
             @include pseudowh;
             position: absolute;
-            background-image: radial-gradient(
-              farthest-corner at 10px 0,
-              $white 0%,
-              #ddd 95%
-            );
+            background-image: radial-gradient(farthest-corner at 10px 0, $white 0%, #ddd 95%);
             transform: scaleX(0.8) rotate(45deg);
             border-radius: 0 40% 60% 40%;
           }
@@ -3154,14 +3086,13 @@ header {
       @include flex_common;
       border: none;
       background-color: transparent;
-      padding: 9px calc(16px + (31 - 16) * ((100vw - 320px) / (1920 - 320))) 9px
-        0;
+      padding: 9px calc(16px + (31 - 16) * ((100vw - 320px) / (1920 - 320))) 9px 0;
       position: relative;
 
-      body[dir="rtl"] & {
+      body[dir='rtl'] & {
         margin-left: 9px;
-        padding: 9px 0 9px
-          calc(16px + (31 - 16) * ((100vw - 320px) / (1920 - 320)));
+        padding: 9px 0 9px calc(16px + (31 - 16) * ((100vw - 320px) / (1920 - 320)));
+
       }
 
       @include mq-max(md) {
@@ -3175,7 +3106,7 @@ header {
         right: 0;
         background-color: $border-color;
 
-        body[dir="rtl"] & {
+        body[dir='rtl'] & {
           right: unset;
           left: 0;
         }
@@ -3190,7 +3121,7 @@ header {
         color: var(--theme-color);
         margin-right: 10px;
 
-        body[dir="rtl"] & {
+        body[dir='rtl'] & {
           margin-right: unset;
           margin-left: 10px;
         }
@@ -3222,16 +3153,13 @@ header {
       visibility: hidden;
       transition: all 0.3s ease-in-out;
 
-      body[dir="rtl"] & {
+      body[dir='rtl'] & {
         left: unset;
         right: 0;
       }
 
       @include mq-max(md) {
-        @include pseudowh(
-          $width: calc(300px + (320 - 300) * ((100vw - 320px) / (1920 - 320))),
-          $height: 100vh
-        );
+        @include pseudowh($width: calc(300px + (320 - 300) * ((100vw - 320px) / (1920 - 320))), $height: 100vh);
         position: fixed;
         top: 0;
         left: -320px;
@@ -3243,7 +3171,7 @@ header {
         transition: all 0.3s ease-in-out;
         box-shadow: none;
 
-        body[dir="rtl"] & {
+        body[dir='rtl'] & {
           left: unset;
           right: -320px;
         }
@@ -3263,11 +3191,7 @@ header {
         display: none;
 
         @include mq-max(md) {
-          @include flex_common(
-            $dis: flex,
-            $align: center,
-            $justify: space-between
-          );
+          @include flex_common($dis: flex, $align: center, $justify: space-between);
           padding: 20px 24px;
           border-bottom: 1px solid $border-color;
           box-shadow: 0 2px 10px -3px rgba($title-color, 0.1);
@@ -3405,7 +3329,7 @@ header {
         margin-right: 0;
       }
 
-      + li {
+      +li {
         .dropdown {
           margin-left: 20px;
 
@@ -3451,7 +3375,7 @@ header {
           .dropdown-list {
             display: block;
 
-            + .dropdown-list {
+            +.dropdown-list {
               margin-top: 10px;
               text-overflow: ellipsis;
               white-space: nowrap;
@@ -3666,6 +3590,7 @@ header {
           color: #fff;
           -webkit-text-fill-color: #fff;
         }
+
       }
     }
 
@@ -3752,21 +3677,17 @@ header {
       display: inline-block;
       margin-left: calc(16px + (29 - 16) * ((100vw - 320px) / (1920 - 320)));
 
-      body[dir="rtl"] & {
+      body[dir='rtl'] & {
         margin-left: unset;
         margin-right: calc(16px + (29 - 16) * ((100vw - 320px) / (1920 - 320)));
       }
 
       @include mq-max(2xl) {
-        @include flex_common(
-          $dis: flex,
-          $align: center,
-          $justify: space-between
-        );
+        @include flex_common($dis: flex, $align: center, $justify: space-between);
         margin-left: 25px;
         float: right;
 
-        body[dir="rtl"] & {
+        body[dir='rtl'] & {
           margin-left: unset;
           margin-right: 25px;
         }
@@ -3775,7 +3696,7 @@ header {
       @include mq-max(xl) {
         margin-left: 15px;
 
-        body[dir="rtl"] & {
+        body[dir='rtl'] & {
           margin-left: unset;
           margin-right: 15px;
         }
@@ -3784,7 +3705,7 @@ header {
       @include mq-max(lg) {
         margin-left: auto;
 
-        body[dir="rtl"] & {
+        body[dir='rtl'] & {
           margin-left: unset;
           margin-right: auto;
         }
@@ -3846,7 +3767,7 @@ header {
           padding-right: 5px;
           border-radius: 0;
 
-          body[dir="rtl"] & {
+          body[dir='rtl'] & {
             padding-left: 5px;
             padding-right: 16px;
           }
@@ -3902,12 +3823,7 @@ header {
 
             @include mq-max(lg) {
               @include flex_common;
-              @include pseudowh(
-                $width:
-                  calc(35px + (46 - 35) * ((100vw - 320px) / (1920 - 320))),
-                $height:
-                  calc(35px + (46 - 35) * ((100vw - 320px) / (1920 - 320)))
-              );
+              @include pseudowh($width: calc(35px + (46 - 35) * ((100vw - 320px) / (1920 - 320))), $height: calc(35px + (46 - 35) * ((100vw - 320px) / (1920 - 320))));
               margin-right: 0;
             }
           }
@@ -3939,7 +3855,7 @@ header {
     align-items: center;
     margin-left: auto;
 
-    body[dir="rtl"] & {
+    body[dir='rtl'] & {
       margin-left: unset;
       margin-right: auto;
     }
@@ -3955,7 +3871,7 @@ header {
       top: -57px;
       right: 0;
 
-      body[dir="rtl"] & {
+      body[dir='rtl'] & {
         right: unset;
         left: 0;
       }
@@ -4001,7 +3917,7 @@ header {
           }
         }
 
-        + .dropdown {
+        +.dropdown {
           margin-left: 23px;
 
           &::after {
@@ -4028,10 +3944,7 @@ header {
       align-items: center;
 
       .header-icon {
-        @include pseudowh(
-          $width: calc(35px + (46 - 35) * ((100vw - 320px) / (1920 - 320))),
-          $height: calc(35px + (46 - 35) * ((100vw - 320px) / (1920 - 320)))
-        );
+        @include pseudowh($width: calc(35px + (46 - 35) * ((100vw - 320px) / (1920 - 320))), $height: calc(35px + (46 - 35) * ((100vw - 320px) / (1920 - 320))));
         @include flex_common;
         font-size: 18px;
         border: 1px solid $border-color;
@@ -4040,7 +3953,7 @@ header {
         padding: 10px;
         position: relative;
 
-        + .header-icon {
+        +.header-icon {
           margin-left: 38px;
 
           &::after {
@@ -4075,7 +3988,7 @@ header {
           @include mq-max(xl) {
             display: flex;
 
-            + .header-icon {
+            +.header-icon {
               margin-left: 38px;
 
               &::after {
@@ -4118,7 +4031,7 @@ header {
         &:nth-of-type(5n-4) {
           display: none;
 
-          + li {
+          +li {
             margin-left: 0;
 
             body[dir="rtl"] & {
@@ -4136,7 +4049,7 @@ header {
           &:nth-of-type(5n-4) {
             display: block;
 
-            + li {
+            +li {
               margin-left: 22px;
 
               body[dir="rtl"] & {
@@ -4145,7 +4058,7 @@ header {
               }
 
               &::after {
-                content: "";
+                content: '';
               }
             }
           }
@@ -4158,10 +4071,7 @@ header {
         }
 
         .header-icon {
-          @include pseudowh(
-            $width: calc(35px + (46 - 35) * ((100vw - 320px) / (1920 - 320))),
-            $height: calc(35px + (46 - 35) * ((100vw - 320px) / (1920 - 320)))
-          );
+          @include pseudowh($width: calc(35px + (46 - 35) * ((100vw - 320px) / (1920 - 320))), $height: calc(35px + (46 - 35) * ((100vw - 320px) / (1920 - 320))));
           @include flex_common;
           font-size: 18px;
           border: 1px solid $border-color;
@@ -4175,7 +4085,7 @@ header {
             background-color: transparent;
           }
 
-          + .header-icon {
+          +.header-icon {
             margin-left: 38px;
 
             &::after {
@@ -4210,9 +4120,7 @@ header {
 
           svg {
             color: $black;
-            font-size: calc(
-              18px + (22 - 18) * ((100vw - 320px) / (1920 - 320))
-            );
+            font-size: calc(18px + (22 - 18) * ((100vw - 320px) / (1920 - 320)));
 
             @include mq-max(xl) {
               color: $white;
@@ -4224,10 +4132,10 @@ header {
           }
         }
 
-        + li {
+        +li {
           margin-left: 37px;
 
-          body[dir="rtl"] & {
+          body[dir='rtl'] & {
             margin-left: unset;
             margin-right: 37px;
           }
@@ -4235,7 +4143,7 @@ header {
           @include mq-max(4xl) {
             margin-left: 22px;
 
-            body[dir="rtl"] & {
+            body[dir='rtl'] & {
               margin-left: unset;
               margin-right: 22px;
             }
@@ -4248,7 +4156,7 @@ header {
             left: -20px;
             background-color: $border-color;
 
-            body[dir="rtl"] & {
+            body[dir='rtl'] & {
               left: unset;
               right: -20px;
             }
@@ -4256,7 +4164,7 @@ header {
             @include mq-max(4xl) {
               left: -13px;
 
-              body[dir="rtl"] & {
+              body[dir='rtl'] & {
                 left: unset;
                 right: -13px;
               }
@@ -4276,7 +4184,7 @@ header {
       margin-left: 37px;
       position: relative;
 
-      body[dir="rtl"] & {
+      body[dir='rtl'] & {
         margin-left: unset;
         margin-right: 37px;
       }
@@ -4284,7 +4192,7 @@ header {
       @include mq-max(4xl) {
         margin-left: 22px;
 
-        body[dir="rtl"] & {
+        body[dir='rtl'] & {
           margin-left: unset;
           margin-right: 22px;
         }
@@ -4293,7 +4201,7 @@ header {
       @include mq-max(md) {
         margin-left: 0;
 
-        body[dir="rtl"] & {
+        body[dir='rtl'] & {
           margin-left: unset;
           margin-right: 0;
         }
@@ -4306,7 +4214,7 @@ header {
         left: -20px;
         background-color: $border-color;
 
-        body[dir="rtl"] & {
+        body[dir='rtl'] & {
           left: unset;
           right: -20px;
         }
@@ -4314,7 +4222,7 @@ header {
         @include mq-max(4xl) {
           left: -13px;
 
-          body[dir="rtl"] & {
+          body[dir='rtl'] & {
             left: unset;
             right: -13px;
           }
@@ -4330,10 +4238,7 @@ header {
       }
 
       .header-icon {
-        @include pseudowh(
-          $width: calc(35px + (46 - 35) * ((100vw - 320px) / (1920 - 320))),
-          $height: calc(35px + (46 - 35) * ((100vw - 320px) / (1920 - 320)))
-        );
+        @include pseudowh($width: calc(35px + (46 - 35) * ((100vw - 320px) / (1920 - 320))), $height: calc(35px + (46 - 35) * ((100vw - 320px) / (1920 - 320))));
         @include flex_common;
         font-size: 18px;
         border: 1px solid $border-color;
@@ -4473,7 +4378,7 @@ header {
         margin-bottom: 0;
         margin-left: 8px;
 
-        body[dir="rtl"] & {
+        body[dir='rtl'] & {
           margin-left: unset;
           margin-right: 8px;
         }
@@ -4509,11 +4414,7 @@ header {
           .main-fire {
             @include pseudowh;
             position: absolute;
-            background-image: radial-gradient(
-              farthest-corner at 10px 0,
-              $white 0%,
-              #ddd 95%
-            );
+            background-image: radial-gradient(farthest-corner at 10px 0, $white 0%, #ddd 95%);
             transform: scaleX(0.8) rotate(45deg);
             border-radius: 0 40% 60% 40%;
           }
@@ -4637,7 +4538,7 @@ header {
         margin-right: 0;
       }
 
-      + li {
+      +li {
         .dropdown {
           margin-left: 20px;
 
@@ -4683,7 +4584,7 @@ header {
           .dropdown-list {
             display: block;
 
-            + .dropdown-list {
+            +.dropdown-list {
               margin-top: 10px;
               text-overflow: ellipsis;
               white-space: nowrap;
@@ -4782,10 +4683,8 @@ header {
   z-index: 1001;
   width: 360px;
   border-radius: 10px;
-  padding: calc(14px + (30 - 14) * ((100vw - 320px) / (1920 - 320)))
-    calc(11px + (20 - 11) * ((100vw - 320px) / (1920 - 320)));
-  box-shadow: -1px 0 10px 0 rgba($title-color, 0.07),
-    5px 20px 40px 0 rgba($title-color, 0.04);
+  padding: calc(14px + (30 - 14) * ((100vw - 320px) / (1920 - 320))) calc(11px + (20 - 11) * ((100vw - 320px) / (1920 - 320)));
+  box-shadow: -1px 0 10px 0 rgba($title-color, 0.07), 5px 20px 40px 0 rgba($title-color, 0.04);
   opacity: 0;
   transition: all 0.3s ease-in-out;
   visibility: hidden;
@@ -4797,7 +4696,7 @@ header {
   }
 
   .cart-list {
-    > li {
+    >li {
       .drop-cart {
         .drop-contain {
           h5 {
@@ -4825,7 +4724,7 @@ header {
         display: block;
         width: 100%;
 
-        + li {
+        +li {
           padding-top: 8px;
           margin-top: 8px;
           border-top: 1px solid #eee;
@@ -4860,11 +4759,7 @@ header {
   }
 
   .cart-list {
-    @include flex_wrap(
-      $dis: flex,
-      $wrap: wrap,
-      $gap: calc(10px + (15 - 10) * ((100vw - 320px) / (1920 - 320)))
-    );
+    @include flex_wrap($dis: flex, $wrap: wrap, $gap: calc(10px + (15 - 10) * ((100vw - 320px) / (1920 - 320))));
     max-height: 300px;
     overflow: auto;
     padding-right: 6px;
@@ -4886,11 +4781,11 @@ header {
       opacity: 0.44;
     }
 
-    > li {
+    >li {
       margin: 0;
       width: 100%;
 
-      + li {
+      +li {
         margin-top: 10px;
         padding-top: 10px;
         border-top: 1px solid $border-color;
@@ -4926,9 +4821,7 @@ header {
           h5 {
             @include line;
             margin-bottom: 5px;
-            font-size: calc(
-              15px + (17 - 15) * ((100vw - 320px) / (1920 - 320))
-            );
+            font-size: calc(15px + (17 - 15) * ((100vw - 320px) / (1920 - 320)));
             color: #1e1e1e;
             font-weight: 500;
           }

@@ -4,7 +4,7 @@
 .custom-padding {
   padding-right: 10px;
 
-  body[dir='rtl'] & {
+  body[dir="rtl"] & {
     padding-right: unset;
     padding-left: 10px;
   }
@@ -37,7 +37,8 @@
   border-radius: 8px;
 
   .shop-banner-details {
-    padding: calc(20px + (40 - 20) * ((100vw - 320px) / (1920 - 320))) calc(25px + (80 - 25) * ((100vw - 320px) / (1920 - 320)));
+    padding: calc(20px + (40 - 20) * ((100vw - 320px) / (1920 - 320)))
+      calc(25px + (80 - 25) * ((100vw - 320px) / (1920 - 320)));
     width: 50%;
 
     @include mq-max(3xl) {
@@ -51,7 +52,11 @@
     @include mq-max(md) {
       width: 80%;
       background: $white;
-      background: linear-gradient(90deg, rgba($white, 0.4) 0%, rgba(246, 246, 246, 0) 100%);
+      background: linear-gradient(
+        90deg,
+        rgba($white, 0.4) 0%,
+        rgba(246, 246, 246, 0) 100%
+      );
     }
 
     @include mq-max(xs) {
@@ -94,7 +99,11 @@
 }
 
 .category-list {
-  @include flex_wrap($dis: flex, $wrap: wrap, $gap: calc(10px + (16 - 10) * ((100vw - 320px) / (1920 - 320))));
+  @include flex_wrap(
+    $dis: flex,
+    $wrap: wrap,
+    $gap: calc(10px + (16 - 10) * ((100vw - 320px) / (1920 - 320)))
+  );
 
   li {
     display: block;
@@ -137,14 +146,18 @@
           background-color: transparent;
           border-color: transparent;
 
-          &[type=checkbox] {
-            --bs-form-check-bg-image: unset
+          &[type="checkbox"] {
+            --bs-form-check-bg-image: unset;
           }
         }
       }
 
       .form-check-label {
-        @include flex_common($dis: flex, $align: center, $justify: space-between);
+        @include flex_common(
+          $dis: flex,
+          $align: center,
+          $justify: space-between
+        );
         width: 100%;
         margin: 0;
         cursor: pointer;
@@ -190,7 +203,7 @@
     margin-left: 10px;
     width: calc(158px + (220 - 158) * ((100vw - 320px) / (1920 - 320)));
 
-    body[dir='rtl'] & {
+    body[dir="rtl"] & {
       margin-left: unset;
       margin-right: 10px;
     }
@@ -211,7 +224,7 @@
       text-align: left;
       border: 1px solid $border-color;
 
-      body[dir='rtl'] & {
+      body[dir="rtl"] & {
         text-align: right;
       }
 
@@ -220,13 +233,12 @@
       }
 
       &::before {
-        content: "\ea4e";
         position: absolute;
         @include remixicon;
         @include center(vertical);
         right: 15px;
 
-        body[dir='rtl'] & {
+        body[dir="rtl"] & {
           right: unset;
           left: 15px;
         }
@@ -276,7 +288,7 @@
             text-align: right;
           }
 
-          +.dropdown-item {
+          + .dropdown-item {
             margin-top: 3px;
             border-top: 1px solid rgba(221, 221, 221, 0.3215686275);
           }
@@ -303,7 +315,7 @@
     top: 0;
     border-right: 1px solid #ddd;
 
-    body[dir='rtl'] & {
+    body[dir="rtl"] & {
       border-right: unset;
       border-left: 1px solid #ddd;
     }
@@ -325,7 +337,7 @@
       overflow: hidden auto;
       transition: all 0.3s ease-in-out;
 
-      body[dir='rtl'] & {
+      body[dir="rtl"] & {
         border: unset;
         left: unset;
         right: -350px;
@@ -336,7 +348,7 @@
       border-right: unset;
       border-left: 1px solid #ddd;
 
-      body[dir='rtl'] & {
+      body[dir="rtl"] & {
         border-left: unset;
         border-right: 1px solid #ddd;
       }
@@ -350,7 +362,7 @@
         left: unset;
         right: -350px;
 
-        body[dir='rtl'] & {
+        body[dir="rtl"] & {
           left: -350px;
           right: unset;
         }
@@ -360,7 +372,7 @@
         left: unset;
         right: 0;
 
-        body[dir='rtl'] & {
+        body[dir="rtl"] & {
           right: unset;
           left: 0;
         }
@@ -370,15 +382,17 @@
         padding-left: calc(16px + (26 - 16) * ((100vw - 320px) / (1920 - 320)));
         padding-right: unset;
 
-        body[dir='rtl'] & {
+        body[dir="rtl"] & {
           padding-left: unset;
-          padding-right: calc(16px + (26 - 16) * ((100vw - 320px) / (1920 - 320)));
+          padding-right: calc(
+            16px + (26 - 16) * ((100vw - 320px) / (1920 - 320))
+          );
         }
 
         @include mq-max(lg) {
           padding: calc(16px + (26 - 16) * ((100vw - 320px) / (1920 - 320)));
 
-          body[dir='rtl'] & {
+          body[dir="rtl"] & {
             padding: calc(16px + (26 - 16) * ((100vw - 320px) / (1920 - 320)));
           }
         }
@@ -388,7 +402,7 @@
     &.show {
       left: 0;
 
-      body[dir='rtl'] & {
+      body[dir="rtl"] & {
         right: 0;
         left: unset;
       }
@@ -397,7 +411,7 @@
     .shop-left-sidebar {
       padding-right: calc(16px + (26 - 16) * ((100vw - 320px) / (1920 - 320)));
 
-      body[dir='rtl'] & {
+      body[dir="rtl"] & {
         padding-right: unset;
         padding-left: calc(16px + (26 - 16) * ((100vw - 320px) / (1920 - 320)));
       }
@@ -405,7 +419,7 @@
       @include mq-max(lg) {
         padding: calc(16px + (26 - 16) * ((100vw - 320px) / (1920 - 320)));
 
-        body[dir='rtl'] & {
+        body[dir="rtl"] & {
           padding: calc(16px + (26 - 16) * ((100vw - 320px) / (1920 - 320)));
         }
       }
@@ -432,7 +446,7 @@
             margin-right: 10px;
             font-size: 20px;
 
-            body[dir='rtl'] & {
+            body[dir="rtl"] & {
               margin-left: 10px;
               margin-right: unset;
             }
@@ -466,7 +480,11 @@
         }
 
         ul {
-          @include flex_wrap($dis: flex, $wrap: wrap, $gap: calc(10px + (15 - 10) * ((100vw - 320px) / (1920 - 320))));
+          @include flex_wrap(
+            $dis: flex,
+            $wrap: wrap,
+            $gap: calc(10px + (15 - 10) * ((100vw - 320px) / (1920 - 320)))
+          );
           padding-top: 16px;
 
           li {
@@ -527,7 +545,7 @@
               }
 
               &::before {
-                @include pos($pos: absolute, $content: '\ea4e');
+                @include pos($pos: absolute, $content: "\ea4e");
                 @include remixicon;
                 @include pseudowh($width: 26px, $height: 26px);
                 @include flex_common;
@@ -538,7 +556,7 @@
                 border-radius: 100%;
                 transition: all 0.3s ease-in-out;
 
-                body[dir='rtl'] & {
+                body[dir="rtl"] & {
                   right: unset;
                   left: 5px;
                 }
@@ -640,7 +658,7 @@
                 filter: invert(1);
                 opacity: 0.4;
 
-                body[dir='rtl'] & {
+                body[dir="rtl"] & {
                   right: unset;
                   left: -10px;
                 }
@@ -655,7 +673,7 @@
               opacity: 0.1;
               transition: all 0.3s ease-in-out;
 
-              body[dir='rtl'] & {
+              body[dir="rtl"] & {
                 right: unset;
                 left: -10px;
               }
@@ -682,7 +700,8 @@
       a {
         font-size: calc(14px + (16 - 14) * ((100vw - 320px) / (1920 - 320)));
         font-weight: 600;
-        padding: calc(6px + (8 - 6) * ((100vw - 320px) / (1920 - 320))) calc(9px + (12 - 9) * ((100vw - 320px) / (1920 - 320)));
+        padding: calc(6px + (8 - 6) * ((100vw - 320px) / (1920 - 320)))
+          calc(9px + (12 - 9) * ((100vw - 320px) / (1920 - 320)));
         background-color: var(--theme-color);
         border-radius: 5px;
         display: inline-block;
@@ -706,7 +725,8 @@
         a {
           font-size: calc(14px + (16 - 14) * ((100vw - 320px) / (1920 - 320)));
           font-weight: 600;
-          padding: calc(6px + (8 - 6) * ((100vw - 320px) / (1920 - 320))) calc(9px + (12 - 9) * ((100vw - 320px) / (1920 - 320)));
+          padding: calc(6px + (8 - 6) * ((100vw - 320px) / (1920 - 320)))
+            calc(9px + (12 - 9) * ((100vw - 320px) / (1920 - 320)));
           background-color: var(--theme-color);
           border-radius: 5px;
           display: inline-block;
@@ -740,7 +760,7 @@
           background-color: #1d1d22;
         }
 
-        body[dir='rtl'] & {
+        body[dir="rtl"] & {
           margin-right: unset;
           margin-left: 14px;
         }
@@ -756,7 +776,7 @@
       .grid-option {
         margin-left: auto;
 
-        body[dir='rtl'] & {
+        body[dir="rtl"] & {
           margin-left: unset;
           margin-right: auto;
         }
@@ -782,13 +802,21 @@
         }
 
         ul {
-          @include flex_wrap($dis: flex, $wrap: wrap, $gap: calc(5px + (12 - 5) * ((100vw - 320px) / (1920 - 320))));
+          @include flex_wrap(
+            $dis: flex,
+            $wrap: wrap,
+            $gap: calc(5px + (12 - 5) * ((100vw - 320px) / (1920 - 320)))
+          );
           align-items: center;
 
           li {
             @include pseudowh($width: 35px, $height: 35px);
             border-radius: 5px;
-            background: linear-gradient(149.8deg, #f6f5f2 17.21%, #fbfaf9 79.21%);
+            background: linear-gradient(
+              149.8deg,
+              #f6f5f2 17.21%,
+              #fbfaf9 79.21%
+            );
 
             a {
               @include flex_common;
@@ -825,7 +853,7 @@
           margin-left: 10px;
           width: calc(172px + (220 - 172) * ((100vw - 320px) / (1920 - 320)));
 
-          body[dir='rtl'] & {
+          body[dir="rtl"] & {
             margin-left: unset;
             margin-right: 10px;
           }
@@ -833,7 +861,7 @@
           @include mq-max(2xs) {
             margin-left: 0;
 
-            body[dir='rtl'] & {
+            body[dir="rtl"] & {
               margin-left: unset;
               margin-right: 0;
             }
@@ -843,15 +871,18 @@
             font-weight: 400;
             display: block;
             background-color: #f6f5f2;
-            font-size: calc(14px + (16 - 14) * ((100vw - 320px) / (1920 - 320)));
-            padding: calc(9px + (10 - 9) * ((100vw - 320px) / (1920 - 320))) 15px;
+            font-size: calc(
+              14px + (16 - 14) * ((100vw - 320px) / (1920 - 320))
+            );
+            padding: calc(9px + (10 - 9) * ((100vw - 320px) / (1920 - 320)))
+              15px;
             border-radius: 5px;
             color: $title-color;
             width: 100%;
             text-align: left;
             border: 1px solid $border-color;
 
-            body[dir='rtl'] & {
+            body[dir="rtl"] & {
               text-align: right;
             }
 
@@ -860,12 +891,12 @@
             }
 
             &::before {
-              @include pos($pos: absolute, $content: "\ea4e");
+              @include pos($pos: absolute);
               @include remixicon;
               @include center(vertical);
               right: 15px;
 
-              body[dir='rtl'] & {
+              body[dir="rtl"] & {
                 right: unset;
                 left: 15px;
               }
@@ -874,7 +905,9 @@
 
           .dropdown-menu {
             background-color: $white;
-            font-size: calc(14px + (16 - 14) * ((100vw - 320px) / (1920 - 320)));
+            font-size: calc(
+              14px + (16 - 14) * ((100vw - 320px) / (1920 - 320))
+            );
             border: 1px solid $light-semi-gray;
             border-radius: 6px;
             color: #898989;
@@ -886,7 +919,7 @@
             html.dark & {
               background-color: #2a2d2d;
               box-shadow: 0 6px 10px 4px #ffffff0d;
-              border: 1px solid rgba(119, 119, 119, .4);
+              border: 1px solid rgba(119, 119, 119, 0.4);
             }
 
             .dropdown-box {
@@ -933,7 +966,7 @@
                   text-align: right;
                 }
 
-                +.dropdown-item {
+                + .dropdown-item {
                   margin-top: 3px;
                   border-top: 1px solid rgba(221, 221, 221, 0.3215686275);
                 }
@@ -957,26 +990,34 @@
       .grid-option {
         margin-left: auto;
 
-        body[dir='rtl'] & {
+        body[dir="rtl"] & {
           margin-left: unset;
           margin-right: auto;
         }
 
         ul {
-          @include flex_wrap($dis: flex, $wrap: wrap, $gap: calc(5px + (10 - 5) * ((100vw - 320px) / (1920 - 320))));
+          @include flex_wrap(
+            $dis: flex,
+            $wrap: wrap,
+            $gap: calc(5px + (10 - 5) * ((100vw - 320px) / (1920 - 320)))
+          );
           align-items: center;
 
           li {
             @include pseudowh($width: 35px, $height: 35px);
             border-radius: 5px;
-            background: linear-gradient(149.8deg, #f6f5f2 17.21%, #fbfaf9 79.21%);
+            background: linear-gradient(
+              149.8deg,
+              #f6f5f2 17.21%,
+              #fbfaf9 79.21%
+            );
             overflow: hidden;
 
             &.active {
               background: var(--theme-color);
 
               a {
-                background-color: var(--theme-color)
+                background-color: var(--theme-color);
               }
 
               img {
@@ -992,7 +1033,6 @@
                 width: auto;
               }
             }
-
           }
         }
       }
@@ -1002,17 +1042,24 @@
       margin-bottom: 25px;
 
       ul {
-        @include flex_wrap($dis: flex, $wrap: wrap, $gap: calc(6px + (15 - 6) * ((100vw - 320px) / (1920 - 320))));
+        @include flex_wrap(
+          $dis: flex,
+          $wrap: wrap,
+          $gap: calc(6px + (15 - 6) * ((100vw - 320px) / (1920 - 320)))
+        );
         padding-top: 16px;
 
         li {
-          padding: calc(6px + (9 - 6) * ((100vw - 320px) / (1920 - 320))) calc(28px + (34 - 28) * ((100vw - 320px) / (1920 - 320))) calc(6px + (9 - 6) * ((100vw - 320px) / (1920 - 320))) calc(7px + (11 - 7) * ((100vw - 320px) / (1920 - 320)));
+          padding: calc(6px + (9 - 6) * ((100vw - 320px) / (1920 - 320)))
+            calc(28px + (34 - 28) * ((100vw - 320px) / (1920 - 320)))
+            calc(6px + (9 - 6) * ((100vw - 320px) / (1920 - 320)))
+            calc(7px + (11 - 7) * ((100vw - 320px) / (1920 - 320)));
           background-color: #f9f8f6;
           position: relative;
           border-radius: 4px;
 
           &:before {
-            @include pos($pos: absolute, $content: '\f00d');
+            @include pos($pos: absolute, $content: "\f00d");
             @include center(vertical);
             @include font;
             right: 13px;
@@ -1044,8 +1091,8 @@
       margin-bottom: 22px;
     }
 
-    >.row {
-      >div {
+    > .row {
+      > div {
         border-right: 1px solid $border-color;
 
         &:last-child {

@@ -11,7 +11,10 @@
       @include pseudowh($width: auto, $height: auto);
 
       button {
-        @include pseudowh($width: calc(6px + (8 - 6) * ((100vw - 320px) / (1920 - 320))), $height: calc(6px + (8 - 6) * ((100vw - 320px) / (1920 - 320))));
+        @include pseudowh(
+          $width: calc(6px + (8 - 6) * ((100vw - 320px) / (1920 - 320))),
+          $height: calc(6px + (8 - 6) * ((100vw - 320px) / (1920 - 320)))
+        );
         border-radius: 4px;
         padding: 0;
         margin: 0;
@@ -56,9 +59,8 @@
     .slick-slider {
       .slick-list {
         .slick-slide {
-
-          >div,
-          >ul {
+          > div,
+          > ul {
             margin: 0;
             margin-bottom: -6px;
           }
@@ -83,9 +85,8 @@
     }
 
     .slick-slide {
-
-      >div,
-      >ul {
+      > div,
+      > ul {
         margin: 0 10px;
 
         @include mq-max(sm) {
@@ -105,9 +106,8 @@
     margin: 0;
 
     .slick-slide {
-
-      >div,
-      >ul {
+      > div,
+      > ul {
         margin: 0;
       }
     }
@@ -123,9 +123,8 @@
     }
 
     .slick-slide {
-
-      >div,
-      >ul {
+      > div,
+      > ul {
         margin: 0 10px;
 
         @include mq-max(sm) {
@@ -157,7 +156,7 @@
 .slick-top {
   .slick-list {
     .slick-track {
-      >div {
+      > div {
         margin: 3px 0;
       }
     }
@@ -170,7 +169,7 @@
       .slick-slide {
         img {
           opacity: 0.8;
-          background-color: $light-gray;
+          background-color: #fff;
           cursor: pointer;
         }
 
@@ -195,10 +194,12 @@
 }
 
 .arrow-slider {
-
   .slick-prev,
   .slick-next {
-    @include pseudowh($width: calc(30px + (40 - 30) * ((100vw - 320px) / (1920 - 320))), $height: calc(30px + (40 - 30) * ((100vw - 320px) / (1920 - 320))));
+    @include pseudowh(
+      $width: calc(30px + (40 - 30) * ((100vw - 320px) / (1920 - 320))),
+      $height: calc(30px + (40 - 30) * ((100vw - 320px) / (1920 - 320)))
+    );
     background-color: $white;
     box-shadow: 0px 1px 4px rgba($title-color, 0.14);
     position: absolute;
@@ -225,13 +226,13 @@
     left: unset;
     right: 60px;
 
-    body[dir='rtl'] & {
+    body[dir="rtl"] & {
       right: unset;
       left: 0;
     }
 
     &::before {
-      content: '\ea64';
+      content: "\ea64";
     }
 
     @include mq-max(sm) {
@@ -242,19 +243,18 @@
   .slick-next {
     right: 5px;
 
-    body[dir='rtl'] & {
+    body[dir="rtl"] & {
       right: unset;
       left: 50px;
     }
 
     &::before {
-      content: '\ea6e';
+      content: "\ea6e";
     }
   }
 }
 
 .arrow-slider-2 {
-
   .slick-prev,
   .slick-next {
     top: -42px;
@@ -286,7 +286,7 @@
 
     &::before {
       @include font;
-      content: '\f053';
+      content: "\f053";
       color: $title-color;
       transition: all 0.3s ease-in-out;
     }
@@ -303,7 +303,7 @@
 
     &::before {
       @include font;
-      content: '\f054';
+      content: "\f054";
       color: $title-color;
     }
 
@@ -322,11 +322,13 @@
 }
 
 .product-arrow {
-
   .slick-prev,
   .slick-next {
     @include flex_common;
-    @include pseudowh($width: calc(28px + (40 - 28) * ((100vw - 320px) / (1920 - 320))), $height: calc(28px + (40 - 28) * ((100vw - 320px) / (1920 - 320))));
+    @include pseudowh(
+      $width: calc(28px + (40 - 28) * ((100vw - 320px) / (1920 - 320))),
+      $height: calc(28px + (40 - 28) * ((100vw - 320px) / (1920 - 320)))
+    );
     background-color: $border-color;
     border-radius: 5px;
     z-index: 1;
@@ -342,7 +344,7 @@
 
     &::before {
       color: $black;
-      content: '\f104';
+      content: "\f104";
     }
 
     &:hover,
@@ -360,7 +362,7 @@
 
     &:before {
       color: $black;
-      content: '\f105';
+      content: "\f105";
     }
 
     &:hover,
@@ -375,11 +377,13 @@
 }
 
 .product-box-arrow {
-
   .slick-prev,
   .slick-next {
     @include flex_common;
-    @include pseudowh($width: calc(28px + (40 - 28) * ((100vw - 320px) / (1920 - 320))), $height: calc(28px + (40 - 28) * ((100vw - 320px) / (1920 - 320))));
+    @include pseudowh(
+      $width: calc(28px + (40 - 28) * ((100vw - 320px) / (1920 - 320))),
+      $height: calc(28px + (40 - 28) * ((100vw - 320px) / (1920 - 320)))
+    );
     border-radius: 50%;
     z-index: 1;
     transition: all 0.3s ease;
@@ -411,7 +415,7 @@
     }
 
     &::before {
-      content: '\f104';
+      content: "\f104";
     }
   }
 
@@ -423,7 +427,7 @@
     }
 
     &:before {
-      content: '\f105';
+      content: "\f105";
     }
   }
 }

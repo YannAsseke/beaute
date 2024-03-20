@@ -13,29 +13,6 @@ const AddToCartButton = ({
 }) => {
   const { i18Lang } = useContext(I18NextContext);
   const { t } = useTranslation(i18Lang, "common");
-
-  const generateWhatsAppMessage = () => {
-    // Create a message with the cart content
-    let message = `Bonjour, je souhaite passer une commande avec les articles suivants :\n\n`;
-    console.log(productState);
-    // Iterate over cart products and append each product to the message
-    message += `${productState.product.name} - ${productState.productQty} ${
-      productState?.productQty > 1 ? "unités" : "unité"
-    }\n`;
-
-    // Return the generated message
-    return encodeURIComponent(message);
-  };
-
-  // Replace this with your WhatsApp number
-  const whatsappNumber = "+33745305253";
-
-  // WhatsApp message with cart content
-  const whatsappMessage = generateWhatsAppMessage();
-
-  // URL for WhatsApp API
-  const whatsappURL = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
-
   return (
     <div className="dynamic-checkout">
       {productState?.product?.type == "simple" ? (
@@ -99,37 +76,25 @@ const AddToCartButton = ({
             : t("AddToCart")}
         </Btn>
       )}
-      {extraOption !== false ? (
-        productState?.product?.type == "simple" ? (
+      {/* {extraOption !== false ? (
+        productState?.product?.type == 'simple' ? (
           <Btn
-            href={whatsappURL}
-            className="border-theme-color btn btn-md scroll-button"
-            disabled={
-              productState?.product?.stock_status == "out_of_stock" ||
-              productState?.product?.quantity < productState?.productQty
-                ? true
-                : false
-            }
-            loading={Number(isLoading)}
-          >
-            {t("BuyNow")}
+            className='border-theme-color btn btn-md scroll-button'
+            onClick={buyNow}
+            disabled={productState?.product?.stock_status == 'out_of_stock' || productState?.product?.quantity < productState?.productQty ? true : false}
+            loading={Number(isLoading)}>
+            {t('BuyNow')}
           </Btn>
         ) : (
           <Btn
-            href={whatsappURL}
-            className="border-theme-color btn btn-md scroll-button"
-            disabled={
-              productState?.selectedVariation?.stock_status == "out_of_stock" ||
-              productState?.stock_status == "out_of_stock"
-                ? true
-                : false
-            }
-            loading={Number(isLoading)}
-          >
-            {t("BuyNow")}
+            className='border-theme-color btn btn-md scroll-button'
+            onClick={buyNow}
+            disabled={productState?.selectedVariation?.stock_status == 'out_of_stock' || productState?.stock_status == 'out_of_stock' ? true : false}
+            loading={Number(isLoading)}>
+            {t('BuyNow')}
           </Btn>
         )
-      ) : null}
+      ) : null} */}
     </div>
   );
 };
